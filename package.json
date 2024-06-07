@@ -19,7 +19,7 @@
     "prepublishOnly": "yarn verify && yarn config:npm",
     "postpublish": "yarn config:dev",
     "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn cache clean && yarn install && watchman watch-del-all && rm -fr $TMPDIR/react-*",
-    "postinstall": "rm -rf lib/ && ./node_modules/.bin/tsc",
+    "postinstall": "rm -rf lib/ && ls -la && ./node_modules/.bin/tsc",
     "deploy": "gh-pages -d web-build",
     "predeploy": "yarn verify && expo build:web"
   },
